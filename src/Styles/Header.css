@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #151d3b;
+}
+.hamburger {
+  color: white;
+  height: 35px;
+  cursor: pointer;
+  margin-top: 5px;
+  transform: rotate(0deg);
+  background-color: #282c34;
+  /* margin-left: -110px; */
+  margin-left: -320px;
+}
+.open {
+  height: 100%;
+  width: 200px;
+  background-color: #282c34;
+  margin-left: -60px;
+  color: red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 2s ease-in-out;
+}
+header {
+  background-color: #282c34;
+  color: white;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  border: 2px solid black;
+  z-index: 1;
+}
+
+footer {
+  background-color: #282c34;
+  border: 2px solid black;
+  color: white;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+}
+.Logo {
+  margin-top: 5px;
+  color: white;
+  text-decoration: none;
+}
+.find {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  margin-top: 10px;
+  width: 60%;
+  align-items: stretch;
+}
+.Input {
+  background-color: #fff;
+  flex: 2;
+}
+
+.search {
+  background-color: gold;
+}
+
+.Nav {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  color: #fff;
+}
+h2 {
+  margin-right: 10px;
+}
