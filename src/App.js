@@ -5,7 +5,7 @@ import Header from "./Components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkout from "./Components/Checkout";
 import { lazy, Suspense } from "react";
-
+//lazy loading
 const Products = lazy(() => import("./Components/Products"));
 
 function App() {
