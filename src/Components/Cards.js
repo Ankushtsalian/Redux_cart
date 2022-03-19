@@ -93,4 +93,4 @@ function Cards(props) {
     </div>
   );
 }
-export default Cards;
+export default React.memo(Cards);

@@ -48,7 +48,7 @@ const Header = () => {
       <nav>
         <Link to="/checkout">
           <div className="Nav">
-            <span>{basket.length}</span>
+            <span>{basket?.length}</span>
             <ShoppingCartOutlinedIcon />
           </div>
         </Link>

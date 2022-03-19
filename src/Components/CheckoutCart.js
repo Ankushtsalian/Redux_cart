@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import "../Styles/Cards.css";
 
-export default function CheckoutCart(props) {
+function CheckoutCart(props) {
   const { title, price, category, image } = props;
 
   return (
@@ -29,3 +29,4 @@ export default function CheckoutCart(props) {
     </div>
   );
 }
+export default CheckoutCart;

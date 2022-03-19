@@ -9,13 +9,13 @@ import useDebounce from "../Hooks/useDebounce";
 const Products = () => {
   const dispatch = useDispatch();
   const { search, products, filter } = useSelector((state) => state.Reducer);
-  const debouncedSaerch = useDebounce(search, 3000);
-  // console.log(debouncedSaerch);
-  // console.log(search);
+  const debouncedSaerch = useDebounce(search, 700);
+  const debouncedfilter = useDebounce(filter, 1000);
+
   async function productApi() {
     const response = await fetch("https://fakestoreapi.com/products");
     const product = await response.json();
-    console.log(product);
+
     dispatch(setProducts(product));
   }
 
@@ -23,7 +23,7 @@ const Products = () => {
 
   return (
     <div className="card">
-      {(debouncedSaerch === "" ? products : filter).map((item) => (
+      {(debouncedSaerch === "" ? products : debouncedfilter).map((item) => (
         <Cards
           item={item}
           key={item.id}
