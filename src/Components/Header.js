@@ -3,11 +3,10 @@ import SearchIcon from "@mui/icons-material/Search";
 import React, { useState } from "react";
 import MenuOpenOutlinedIcon from "@mui/icons-material/MenuOpenOutlined";
 import { useDispatch, useSelector } from "react-redux";
-
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
-
 import { setSearch } from "../Redux/actions/actions";
+
 const Header = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
@@ -16,6 +15,7 @@ const Header = () => {
   function debounced(e) {
     dispatch(setSearch({ value: e.target.value }));
   }
+
   function handleClick() {
     setOpen(() => !open);
   }

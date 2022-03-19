@@ -1,10 +1,11 @@
-import React from "react";
-import Cards from "./Cards";
+import React, { lazy } from "react";
+// import Cards from "./Cards";
 import "../Styles/Cards.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../Redux/actions/actions";
 import useDebounce from "../Hooks/useDebounce";
+const Cards = lazy(() => import("./Cards"));
 
 const Products = () => {
   const dispatch = useDispatch();
