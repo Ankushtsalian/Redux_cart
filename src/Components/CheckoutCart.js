@@ -10,7 +10,7 @@ function CheckoutCart(props) {
 
   return (
     <div className="cardLayout">
-      <Card className="card">
+      <Card>
         <div className="img">
           <CardMedia
             component="img"
