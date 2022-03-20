@@ -19,6 +19,9 @@ export const setSearch = (event) => {
   };
 };
 
-export const Remove = () => {
-  return <div>Remove</div>;
+export const remove = (item) => {
+  return {
+    type: "remove",
+    payload: item,
+  };
 };

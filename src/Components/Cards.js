@@ -34,7 +34,6 @@ function Cards(props) {
 
   const dispatch = useDispatch();
   function handleClick(items) {
-    console.log(items);
     dispatch(addtoCart(items));
   }
   const handleExpandClick = () => {
@@ -44,15 +43,14 @@ function Cards(props) {
   return (
     <div className="cardLayout">
       <Card sx={{ maxWidth: 345 }}>
-        <div className="img">
-          <CardMedia
-            component="img"
-            height="200"
-            image={image}
-            alt="Paella dish"
-            className="img"
-          />
-        </div>
+        {/* <div className="img"> */}
+        <CardMedia
+          component="img"
+          height="200"
+          image={image}
+          alt="Paella dish"
+        />
+        {/* </div> */}
         <CardContent>
           <Typography variant="body2">{category}</Typography>
           <Typography paragraph>{title}</Typography>
@@ -62,7 +60,11 @@ function Cards(props) {
           </Typography>
           <Rating value={rate} />
 
-          <Button onClick={() => handleClick(item)} className="Button">
+          <Button
+            variant="secondary"
+            onClick={() => handleClick(item)}
+            className="Button"
+          >
             Add to Cart
           </Button>
         </CardContent>

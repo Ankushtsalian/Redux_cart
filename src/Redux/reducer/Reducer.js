@@ -23,6 +23,7 @@ export const Reducer = (state = initialState, action) => {
 
 const cart = {
   basket: [],
+  remove: [],
 };
 
 export const cartReducer = (state = cart, action) => {
@@ -31,6 +32,12 @@ export const cartReducer = (state = cart, action) => {
       return {
         basket: [...state.basket, action.payload],
       };
+    case "remove":
+      const index = state.basket.indexOf(action.payload);
+      const newBasket = [...state.basket];
+      newBasket.splice(index, 1);
+
+      return { ...state, basket: newBasket };
 
     default:
       return state;

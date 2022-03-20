@@ -1,5 +1,5 @@
 import React, { lazy } from "react";
-// import Cards from "./Cards";
+
 import "../Styles/Cards.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,7 +10,7 @@ const Cards = lazy(() => import("./Cards"));
 const Products = () => {
   const dispatch = useDispatch();
   const { search, products, filter } = useSelector((state) => state.Reducer);
-  const debouncedSaerch = useDebounce(search, 700);
+  const debouncedSaerch = useDebounce(search, 1700);
   const debouncedfilter = useDebounce(filter, 1000);
 
   async function productApi() {
